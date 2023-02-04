@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title> Bellabeat Case Study</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Portfolio</a></li>
+							<li><a href="elements.html">About me!</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/nick-zinselmeier/" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/nzins" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Bellabeat<br />
+									Case Study</h1>
+									<p>A case study I completed as part of my Google Career Certificate: Data Analytics<br />
+									program. The case is focused on a women's health company, Bellabeat, that is interested<br />
+									in unlocking growth opportunities for the company by analyzing its user data from smart devices.</p>
+								</header>
+								<div class="image main"><img src="images/bellabeat.PNG" alt="" /></div>
+							<header class="major">
+								<br>
+								<h2>Scenario</h2>
+							</header>
+							<header>
+							<p>As a Junior Data Analyst working at Bellabeat, my task in this case study was to analyze the data they tracked on members' smart devices. By analyzing the data, I would be focusing on how consumers are currently using their smart devices, and what metrics seem worth paying attention to. Using those insights, I would then be tasked with recommending marketing strategies to Urška Sršen, cofounder and Chief Creative Officer of Bellabeat. </p>
+							</header>
+							<header>
+								<h3>About Bellabeat</h3>
+							</header>
+								<p>Urška Sršen and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products. Sršen used her background as an artist to develop beautifully designed technology that informs and inspires women around the world. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women.
+								</p>
+								<p>By 2016, Bellabeat had opened offices around the world and launched multiple products. Bellabeat products became available through a growing number of online retailers in addition to their own e-commerce channel on <a href="https://bellabeat.com/" target="_blank">their website</a>. The company has invested in traditional advertising media, such as radio, out-of-home billboards, print, and television, but focuses on digital marketing extensively. Bellabeat invests year-round in Google Search, maintaining active Facebook and Instagram pages, and consistently engages consumers on Twitter. Additionally, Bellabeat runs video ads on Youtube and display ads on the Google Display Network to support campaigns around key marketing dates.
+								</p>
+								<p>Sršen knows that an analysis of Bellabeat’s available consumer data would reveal more opportunities for growth. She has asked the marketing analytics team to focus on a Bellabeat product and analyze smart device usage data in order to gain insight into how people are already using their smart devices. Then, using this information, she would like high-level recommendations for how these trends can inform Bellabeat marketing strategy.
+								</p>
+							<header>
+								<h3>Using the 6-Step data analysis process</h3>
+							</header>
+								<p>This case study was the final part of the Google Career Certificate in Data Analytics program, which heavily emphasized the "Data Analysis Process." This refers to the 6 phases that Data Analysts go through in one form or another when completing their analysis on a given project. These phases are: Ask, Prepare, Process, Analyze, Share, Act.</p>
+								<p>For this project, there were deliverables assigned for each of those processes, asking for a statement or summary of certain information related to each step of the process. I will be presenting the completed sections of these phases to share my work with you.
+							<header>
+								<h3>Step 1: Ask</h3>
+								<p>Deliverable: A clear statement of the business task.</p>
+							</header>
+								<p> The business task for this project is to uncover insights about how consumers are using the Bellabeat tracking products, and then use these insights to drive high-level marketing strategies for Bellabeat. This will be done by analyzing tracking device data provided by Bellabeat customers.
+								</p>
+							<header>
+								<h3>Step 2: Prepare</h3>
+								<p>Deliverable: A description of all data sources used.</p>
+							</header>
+								<p>The Data is provided by a public <a href="https://www.kaggle.com/datasets/arashnic/fitbit" target="_blank">kaggle dataset</a>. The data is organized by several excel.csv files, each focusing on one variable in particular. The datasets I focused on analyzing in this study were the Daily Activity, Hourly Calories, Hourly Steps, and Sleep Day datasets.
+								</p>
+								<p>The dataset has a variety of different tables, each organized by one or a few guiding variables. For example, the data set provided information on steps taken, activity level, and calories burned. This was then further partitioned into subsequent excel.csv files by day, hour and minutes. I was not able to find any issues with data bias, or data integrity when examining the data in excel after downloading them.
+								</p>
+								<p>As for data credibility however, the dataset is quite small in sample size: there are only a maximum of 33 respondents for the largest dataset with anonymized user ID's, and only 8 respondents in the smallest dataset. In order to have a much more accurate and reliable dataset, Bellabeat should aim to include at the very least a few hundred responses to achieve more meaningful analyses.
+								</p>
+							<header>
+								<h3>Step 3: Process</h3>
+								<p>Deliverable: Documented steps of cleaning & manipulating datasets</p>
+							</header>
+								<p>I chose to use RStudio on PositCloud to conduct my data cleaning processes for the dataset. As I mentioned earlier, I was most interested in analyzing the Daily Activity, Hourly Calories, Hourly Intensities, Hourly Steps, Weight Log, and Sleep Day data files. I loaded these into R after installing the "Tidyverse", "Janitor" and "Lubridate" packages to clean the data.
+								</p>
+								<div class="image main"><img src="images/Rpackages.PNG" alt="" /></div>
+								<p>I first began viewing the data via head(), colnames() and n_distinct(tablename$Id) functions, to see the data, view what columns were in given data frames, and to understand how many unique respondents had provided their data on a given table.
+								</p>
+								<div class="image main"><img src="images/Rcleaning1.PNG" alt="" /></div>
+								<p>As I called up the information about the Weight Log table, it was clear that this may not be an appropriate data set to use, as there were only 8 entries which themselves had minimally impactful results to share and analyze.
+								</p>
+								<div class="image main"><img src="images/Rcleaning_weightinfo.PNG" alt="" /></div>
+								<p>Now that I knew which tables I wanted to use in my analysis, I began cleaning the datasets by first addressing the issue with the date format. For datasets where results were reported on a given day, instead of by hour, the hour was still listed along with the date, which I decided to remove. I also renamed the column header for those particular data sets from "Activity Date" to simply "Date".
+								</p>
+								<p>I also added statements to remove any rows or columns that were completely empty (some rows can still have zero as values, for example a user might record no activity for a certain day), as well as formatting all column names to include underscores in-between words, to follow proper naming convention.
+								</p>
+								<div class="image main"><img src="images/Rcleaning_renaming.PNG" alt="" /></div>
+								<p>After completing the intial cleaning processes, I was already curious enough to want to visualize some of the data I had just prepared. In order to make a scatterplot for all users focusing on variables in two seperate tables, "Hourly Intensities" and "Hourly Calories", I combined the two tables where these values are contained into a shared table which I could then use for a visualization.
+								</p>
+								<div class="image main"><img src="images/Rviz.PNG" alt="" /></div>
+								<p>Which resulted in the following assortment of scatterplots, one for each user Id.
+								</p>
+								<div class="image main"><img src="images/Rplot.PNG" alt="" /></div>
+								<p>I then exported the cleaned datasets for use in other programs like Excel or via SQL queries in the next step.
+								</p>
+								<div class="image main"><img src="images/Rexporting.PNG" alt="" /></div>
+							<header>
+								<h3>Step 4: Analyze</h3>
+								<p>Deliverable: A summary of analysis performed</p>
+							</header>
+								<p>
+								</p>
+								<article>
+									<header>
+									</header>
+									<p>With the data sets now cleaned from my work in RStudio, I thought it would be a good idea to use SQL to perform Join statements and combine relevant data together. I imported the cleaned datasets into BigQuery and began pulling data.
+									</p>
+									<p>This first join statement below was related to the scatterplots I created in RStudio, as it seemed logical to me to associate "Intensity" with amount of "Calories" burned. Below you can see how the time is presented in date/hour format, as this is relevant to the amount of calories burned during that hour, as well as the average and total intensity during that hour.
+									</p>
+									<div class="image main"><img src="images/SQL_calory_intensity.PNG" alt="" /></div>
+									<p>Another relationship that I was excited to learn more about was with calories burned, and steps taken. These values were also reported by hour, following the same format as before, listed by user Id, and then ascending date/hour.
+									</p>
+									<div class="image main"><img src="images/SQL_calory_steps.PNG" alt="" /></div>
+									<p>Finally, I created a query using the largest dataset "Daily Activity" and combining it with "Sleep Day". In this query, I also created a new field, labeled "total_active_minutes", which combines all of the active minutes reported for that particular day into one column. I did this to compare the amount of active time a given user spent in a day with the amount of sedentary time, as well as the time asleep and in bed.
+									<div class="image main"><img src="images/SQL_sleep_activity.PNG" alt="" /></div>
+									</p>
+									<p>This final query was the most interesting to me personally. It seemed to provide a great overall collection of activity for a user on a given day. I already had ideas starting to form about how to work with this dataset in Tableau and what visualizations I could create that would represent average values and individual values for users.
+									</p>
+								</article>
+							<header>
+								<h3>Step 5: Share</h3>
+								<p>Deliverable: Supporting visualizations and key findings.</p>
+							</header>
+								<p>Knowing how the data was structured in the csv files, I knew right away I would want to have a couple of different options when viewing the data in a visual format. I approached the first dashboard from the perspective of wanting to view information about any one given user ID. The list of user ID's on the left hand side is used to select individual user ID's and learning about their activity trends during the period they collected data.
+								</p>
+								<p>If you are interested, you may enter fullscreen with the embedded Tableau visualization below by clicking the icon in the bottom right of the table and hovering over the elements to learn more about the data set. I recommend only viewing a handful of individual ID's at one time.
+								</p>
+							<article>
+								<div class='tableauPlaceholder' id='viz1675456151755' style='position: relative'>
+									<noscript><a href='#'><img alt='By ID ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Be&#47;Bellabeat_MemberSelect&#47;ByID&#47;1_rss.png' style='border: none' /></a></noscript>
+									<object class='tableauViz'  style='display:none;' width=100%>
+										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+										<param name='embed_code_version' value='3' />
+										<param name='site_root' value='' />
+										<param name='name' value='Bellabeat_MemberSelect&#47;ByID' />
+										<param name='tabs' value='no' />
+										<param name='toolbar' value='yes' />
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Be&#47;Bellabeat_MemberSelect&#47;ByID&#47;1.png' />
+										<param name='animate_transition' value='yes' />
+										<param name='display_static_image' value='yes' />
+										<param name='display_spinner' value='yes' />
+										<param name='display_overlay' value='yes' />
+										<param name='display_count' value='yes' />
+										<param name='language' value='en-US' />
+									</object>
+								</div>
+							</article>
+								<p>Another idea for a dashboard I had was to create basic scatterplots in an attempt to capture overall trends that described each of the users' data. One thing I was happy to see in the scatterplots below was the fact that there is no clear trend between average calories burned, and average active minutes, which suggests to me that there was a variety of intensities between each users individual activity sessions. This might have meant that some individuals were active for a long time but had a low intensity, and as well other individuals who were active for short amounts of time but with high intensity, or even any number of combinations between these kinds of values, therefore contributing to the wide spread of values on the scatterplot to the right.
+								</p>
+								<p>A quick explanation of how the variables are displayed in the scatterplots below: Each of the circles represents a single user ID. The size of the circle represents how large or little their average sedentary minutes value was for the time period they collected data, as shown by the key on the left hand side. I also made those datapoints which represent a large average sedentary value to have a darker red color, and those with smaller values to have a lighter orange color.
+								</p>
+							<article>
+								<div class='tableauPlaceholder' id='viz1675457163729' style='position: relative'>
+									<noscript><a href='#'><img alt='Scatterplots ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Be&#47;Bellabeat_Scatterplots&#47;Scatterplots&#47;1_rss.png' style='border: none' /></a></noscript>
+									<object class='tableauViz'  style='display:none;' width=100%>
+										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+										<param name='embed_code_version' value='3' />
+										<param name='site_root' value='' />
+										<param name='name' value='Bellabeat_Scatterplots&#47;Scatterplots' />
+										<param name='tabs' value='no' />
+										<param name='toolbar' value='yes' />
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Be&#47;Bellabeat_Scatterplots&#47;Scatterplots&#47;1.png' />
+										<param name='animate_transition' value='yes' />
+										<param name='display_static_image' value='yes' />
+										<param name='display_spinner' value='yes' />
+										<param name='display_overlay' value='yes' />
+										<param name='display_count' value='yes' />
+										<param name='language' value='en-US' />
+									</object>
+								</div>
+							</article>
+								<p>The last dashboard I wanted to create was another dashboard which attempted to summarize the data at an overview level based on what variable a particular stakeholder might be interested in viewing. This dashboard allows one to filter for the variable they are interested in, and then view all of the average values for each individual user ID for that given data set.
+								</p>
+								<p>To learn more about the data in this last dashboard, hover over a user ID to learn the average value for the dataset you have selected. Select different charts on the left hand side to see the difference in values across data sets. The values are expressed as averages over the amount of days which that individual had reported while using a tracker product.
+								</p>
+							<article>
+								<div class='tableauPlaceholder' id='viz1675457715282' style='position: relative'>
+									<noscript><a href='#'><img alt='User Averages ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Be&#47;Bellabeat_UserAverages&#47;UserAverages&#47;1_rss.png' style='border: none' /></a></noscript>
+									<object class='tableauViz'  style='display:none;' width=100%>
+										<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+										<param name='embed_code_version' value='3' />
+										<param name='site_root' value='' />
+										<param name='name' value='Bellabeat_UserAverages&#47;UserAverages' />
+										<param name='tabs' value='no' />
+										<param name='toolbar' value='yes' />
+										<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Be&#47;Bellabeat_UserAverages&#47;UserAverages&#47;1.png' />
+										<param name='animate_transition' value='yes' />
+										<param name='display_static_image' value='yes' />
+										<param name='display_spinner' value='yes' />
+										<param name='display_overlay' value='yes' />
+										<param name='display_count' value='yes' />
+										<param name='language' value='en-US' />
+									</object>
+								</div>
+							</article>
+							<header>
+								<h3>Step 6: Act</h3>
+								<p>Deliverable: Your top high-level insights based on analysis.</p>
+							</header>
+								<p>After viewing the data using the tools at my disposal - first in RStudio, then using SQL queries, and finally in Tableau - it was clear that some trends existed in the data that might help Bellabeat better understand its users.
+								</p>
+								<dl>
+									<dt>Insight 1</dt>
+									<dd>
+										<p>The first insight I have after working with the data is that Bellabeat should attempt to collect more data overall. It is difficult if not outright uninformative to gather trends from such a small sample size.
+										</p>
+									</dd>
+									<dt>Insight 2</dt>
+									<dd>
+										<p>The second thing I leaned is that there are some basic trends present that tend to follow patterns. For example, if a user has a high sleep time average, their sedentary time is likely to be lower than average. As well, the higher a user's value is for sedentary time, the lower their sleep time is likely to be.
+										</p>
+										<p>Meanwhile, I came to conclude that calories burned during a day was entirely dependent on other factors. Users who reported high values of activity time sometimes had calories burned that were much below average. I certainly believe more information is required to accurately track and predict calories burned for users based on othe variables.
+										</p>
+									</dd>
+									<dt>Insight 3</dt>
+									<dd>
+										<p>The final insight or recommendation I have is to present this data to the user in a similar format to the first dashboard I created. I think that users may be more encouraged to track their data if they can see visualizations like in the first dashboard that track their statistics over time, and make changes to their lifestyle if they think it might benefit them.
+										</p>
+									</dd>
+								</dl>
+							<header>
+								<h3>Conlusion</h3>
+							</header>
+								<p>I really enjoyed working with this dataset, despite its limitations in sample size. It forced me to think about how variables might be related, and how to go about finding trends. The example that sticks out from this case study to me was deciding to combine all of the active minutes froma a user's data on a given day into one column, in order to compare this with total minutes asleep, total minutes in bed, and total sedentary minutes. This allowed me to think about the big picture for users and begin thinking about what summary statistics for this dataset would end up looking like. In a much larger dataset like the one I recommend Bellabeat to collect in the future, these summary statistics would certainly need to be visualized in a scatterplot format instead of a bar chart for users, as several hundred data points would fit together much better in that format.
+								</p>
+								<p>I was also happy to get the chance to use RStudio in this case study for cleaning data, and creating the initial scatterplots for users. In the previous case study with Cyclistic, it was not necessary to run the data through the cleaning process in RStudio, as columns were properly named, and only certain information was missing in some months, such as station name, which would not affect the overall analysis.
+								</p>
+								<p>I hope you were able to follow my thought process as I worked through the 6 steps of the process set forth by the Google Career Certificate in Analytics program. Thank you very much for examining my work with this case study!
+								</p>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+						<section>
+							<h3>Email</h3>
+							<p><a href="mailto:nzinsel@gmail.com">nzinsel@gmail.com</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/nick-zinselmeier/" class="icon brands fa-linkedin"><span class="label">Twitter</span></a></li>
+								<li><a href="https://github.com/nzins" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script type='text/javascript'>
+			var divElement = document.getElementById('viz1675456151755');
+			var vizElement = divElement.getElementsByTagName('object')[0];
+			if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';}
+			else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';}
+			else { vizElement.style.width='100%';vizElement.style.height='727px';}
+			var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+			<script type='text/javascript'>
+			var divElement = document.getElementById('viz1675457163729');
+			var vizElement = divElement.getElementsByTagName('object')[0];
+			if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';}
+			else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';}
+			else { vizElement.style.width='100%';vizElement.style.height='777px';}
+			var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+			<script type='text/javascript'>
+			var divElement = document.getElementById('viz1675457715282');
+			var vizElement = divElement.getElementsByTagName('object')[0];
+			if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='660px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';}
+			else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='660px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';}
+			else { vizElement.style.width='100%';vizElement.style.height='1577px';}
+			var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+	</body>
+</html>
